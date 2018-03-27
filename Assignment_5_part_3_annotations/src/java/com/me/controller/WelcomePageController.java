@@ -6,23 +6,22 @@
 package com.me.controller;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.AbstractController;
 
 /**
  *
  * @author nanaj
  */
-public class WelcomePageController extends AbstractController {
-    
-    public WelcomePageController() {
+@Controller
+@RequestMapping("/welcomepage")
+public class WelcomePageController {
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ModelAndView welcome(HttpServletRequest request) throws Exception {
+        
+        return new ModelAndView("welcomepage");
     }
-    
-    protected ModelAndView handleRequestInternal(
-            HttpServletRequest request,
-            HttpServletResponse response) throws Exception {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
-    
 }

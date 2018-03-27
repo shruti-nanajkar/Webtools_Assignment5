@@ -13,6 +13,7 @@
         <title>Browse Success View</title>
     </head>
     <body align="center" bgcolor="#ffe6ff">
+        <c:set var="contextPath" value="${pageContext.request.contextPath}" />
         <h3>You searched for: ${requestScope.searchValue}</h3>
         <table border="1" align="center">
                 <tr>
@@ -32,6 +33,6 @@
                     </tr>
                 </c:forEach>
         </table>
-        <p><a href="welcomepage.htm">Click here</a> to go back to Welcome Page!</p>
+        <p><a href="${contextPath}/welcomepage/">Click here</a> to go back to Welcome Page!</p>
     </body>
 </html>

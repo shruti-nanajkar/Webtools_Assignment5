@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,9 +14,10 @@
         <title>JSP Page</title>
     </head>
     <body align="center" bgcolor="#fff5e6">
+        <c:set var="contextPath" value="${pageContext.request.contextPath}" />
         <h1>Browse Movies</h1>
         
-        <form method="post" action="browse.htm">
+        <form:form action="${contextPath}/movie/browse" method="post" commandName="movie">
         Enter a keyword: <input type="text" name="txtInput" placeholder="keyword">
         <br>
         <table align="center">
@@ -32,7 +35,7 @@
             </tr>
         </table>
             <input type="submit" value="Browse">
-        </form>
+      </form:form>
     </body>
 </html>
 

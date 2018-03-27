@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/nanaj/Documents/NetBeansProjects/Assignment_5_part_3_annotations/web/WEB-INF/applicationContext.xml</file>
+            <file>file:/C:/Users/nanaj/Documents/NetBeansProjects/Assignment_5_part_3_annotations/web/WEB-INF/jsp/addmovieview.jsp</file>
+            <file>file:/C:/Users/nanaj/Documents/NetBeansProjects/Assignment_5_part_3_annotations/src/java/com/me/controller/MovieController.java</file>
+            <file>file:/C:/Users/nanaj/Documents/NetBeansProjects/Assignment_5_part_3_annotations/web/WEB-INF/jsp/addmoviesuccess.jsp</file>
+            <file>file:/C:/Users/nanaj/Documents/NetBeansProjects/Assignment_5_part_3_annotations/web/WEB-INF/jsp/browsemoviesform.jsp</file>
+            <file>file:/C:/Users/nanaj/Documents/NetBeansProjects/Assignment_5_part_3_annotations/web/WEB-INF/appServlet/servlet-context.xml</file>
+            <file>file:/C:/Users/nanaj/Documents/NetBeansProjects/Assignment_5_part_3_annotations/web/WEB-INF/jsp/browsemoviessuccess.jsp</file>
+            <file>file:/C:/Users/nanaj/Documents/NetBeansProjects/Assignment_5_part_3_annotations/web/WEB-INF/jsp/welcomepage.jsp</file>
+            <file>file:/C:/Users/nanaj/Documents/NetBeansProjects/Assignment_5_part_3_annotations/src/java/com/me/pojo/Movie.java</file>
+        </group>
+    </open-files>
+</project-private>

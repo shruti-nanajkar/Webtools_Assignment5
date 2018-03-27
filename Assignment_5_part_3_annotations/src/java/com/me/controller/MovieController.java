@@ -13,12 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -51,16 +49,15 @@ public class MovieController {
         //addMovieDao.addMovie(movie);
         if (addMovieDao.addMovie(movie)) {
 
-            mav = new ModelAndView("view-name");
+            mav = new ModelAndView("addmoviesuccess");
             System.out.println("sucessfully added movie to db");
 
         }
         return mav;
     }
-    
-    
+
     //Browse Movies method
-    @RequestMapping(value = "/movie/browse", method = RequestMethod.GET)
+    @RequestMapping(value = "/movie/browse", method = RequestMethod.POST)
     public ModelAndView browseMovies(HttpServletRequest request) throws Exception {
 
         ModelAndView mav = null;
@@ -69,9 +66,23 @@ public class MovieController {
 
         List<Movie> movieList = (List<Movie>) browseMoviesDao.browseMovies(columnName, searchValue);
         System.out.println("No of Movies: " + movieList.size());
-        mav = new ModelAndView("view-name", "movieList", movieList);
+        mav = new ModelAndView("browsemoviessuccess", "movieList", movieList);
         mav.addObject("searchValue", searchValue);
         return mav;
     }
 
+    @RequestMapping(value = "/movie/add", method = RequestMethod.GET)
+    public ModelAndView displayAddMovieView(HttpServletRequest request) throws Exception {
+
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("movie", new Movie());
+        mv.setViewName("addmovieview");
+        return mv;
+    }
+    
+    @RequestMapping(value = "/movie/browse", method = RequestMethod.GET)
+    public ModelAndView displayBrowseMoviesView(HttpServletRequest request) throws Exception {
+
+        return new ModelAndView("browsemoviesform");
+    }
 }
